@@ -93,6 +93,12 @@
                 <div data-i18n="Analytics">Karya Siswa</div>
             </a>
         </li>
+        <li class="menu-item {{ request()->is('admin-pplg/banner*') ? 'active' : '' }}">
+            <a href="/admin-pplg/banner" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-broadcast"></i>
+                <div data-i18n="Analytics">Iklan Hotspot</div>
+            </a>
+        </li>
         {{-- <li class="menu-item {{ request()->is('admin-pplg/logout') ? 'active' : '' }}">
             <a href="/logout" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-log-out"></i>

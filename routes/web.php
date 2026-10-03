@@ -15,6 +15,7 @@ use App\Http\Controllers\SoftwareController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\StudentPortfolioController;
+use App\Http\Controllers\BannerController;
 use Illuminate\Support\Facades\Artisan;
 
 Route::get('data', function () {
@@ -70,4 +71,5 @@ Route::prefix('/admin-pplg')->middleware('isLogin')->group(function () {
     Route::resource('mapel', MapelController::class)->except(['show']);
     Route::resource('software', SoftwareController::class)->except(['show']);
     Route::resource('karya-siswa', StudentPortfolioController::class)->except(['show']);
+    Route::resource('banner', BannerController::class)->except(['show']);
 });
