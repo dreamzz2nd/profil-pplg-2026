@@ -77,7 +77,7 @@
 
   const API_URLS = [
     '{{ url("/api/iklan") }}',
-    'https://pplg-smkn1cirebon.sch.id/api/iklan'
+    'https://pplg.neperone.id/api/iklan'
   ];
 
   for (const apiUrl of API_URLS) {
@@ -125,8 +125,8 @@
 
                         <h6 class="fw-bold mb-2">Perintah Terminal Mikrotik:</h6>
                         <pre class="bg-dark text-warning p-3 rounded" style="font-size: 13px;"><code>/ip hotspot walled-garden
-add dst-host=pplg-smkn1cirebon.sch.id action=allow
-add dst-host=*.pplg-smkn1cirebon.sch.id action=allow</code></pre>
+add dst-host=pplg.neperone.id action=allow
+add dst-host=*.pplg.neperone.id action=allow</code></pre>
                     </div>
                 </div>
             </div>

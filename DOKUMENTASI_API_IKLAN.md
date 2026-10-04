@@ -19,7 +19,7 @@ Mengambil daftar seluruh banner iklan yang berstatus **Aktif (`is_active = 1`)**
 #### **Detail Request**:
 - **Method**: `GET`
 - **URL Lokal**: `http://127.0.0.1:8000/api/iklan`
-- **URL Produksi**: `https://pplg-smkn1cirebon.sch.id/api/iklan`
+- **URL Produksi**: `https://pplg.neperone.id/api/iklan`
 - **Headers**:
   ```http
   Accept: application/json
@@ -144,7 +144,7 @@ initSwiperSlider();
 
   const API_URLS = [
     'http://127.0.0.1:8000/api/iklan',
-    'https://pplg-smkn1cirebon.sch.id/api/iklan'
+    'https://pplg.neperone.id/api/iklan'
   ];
 
   for (const apiUrl of API_URLS) {
@@ -192,8 +192,8 @@ Sebelum user login ke Hotspot Mikrotik, perangkat user **belum memiliki akses in
 ### Perintah Terminal Mikrotik:
 ```routeros
 /ip hotspot walled-garden
-add dst-host=pplg-smkn1cirebon.sch.id action=allow
-add dst-host=*.pplg-smkn1cirebon.sch.id action=allow
+add dst-host=pplg.neperone.id action=allow
+add dst-host=*.pplg.neperone.id action=allow
 ```
 
 Jika server berada di IP lokal yang sama dalam satu jaringan:
