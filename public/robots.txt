@@ -1,2 +1,6 @@
 User-agent: *
-Disallow:
+Allow: /
+Disallow: /admin-pplg/
+Disallow: /masuk-ke-dashboard
+
+Sitemap: /sitemap.xml

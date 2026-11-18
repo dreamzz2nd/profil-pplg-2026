@@ -54,6 +54,22 @@ Route::get("/artikel/{id}", [FrontController::class, "detail_article"]);
 Route::get("/karya-siswa", [FrontController::class, "karya_siswa"]);
 Route::get("/karya-siswa/{id}", [FrontController::class, "detail_karya_siswa"]);
 
+Route::get('/sitemap.xml', function () {
+    try {
+        $articles = \Illuminate\Support\Facades\DB::table('articles')->select('id', 'updated_at')->get();
+    } catch (\Throwable $e) {
+        $articles = collect([]);
+    }
+    try {
+        $portfolios = \Illuminate\Support\Facades\DB::table('student_portfolios')->whereNull('deleted_at')->select('id', 'updated_at')->get();
+    } catch (\Throwable $e) {
+        $portfolios = collect([]);
+    }
+
+    $content = view('sitemap', compact('articles', 'portfolios'));
+    return response($content, 200)->header('Content-Type', 'application/xml');
+});
+
 Route::get('/admin-pplg', function () {
     return view('admin.pages.dashboard');
 })->middleware("isLogin");

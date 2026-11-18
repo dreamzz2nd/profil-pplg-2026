@@ -2,10 +2,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pengembangan Perangkat Lunak dan Game</title>
+
+    @include('components.seo', [
+        'title' => $title ?? ($seoTitle ?? null),
+        'description' => $description ?? ($seoDescription ?? null),
+        'keywords' => $keywords ?? ($seoKeywords ?? null),
+        'image' => $image ?? ($seoImage ?? null),
+        'author' => $author ?? ($seoAuthor ?? null),
+        'type' => $type ?? ($seoType ?? 'website'),
+        'publishedTime' => $publishedTime ?? ($seoPublishedTime ?? null),
+        'url' => $url ?? ($seoUrl ?? null),
+    ])
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ url('logo.png') }}" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />

@@ -4,14 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Pengembangan Perangkat Lunak dan Gim</title>
+
+    @include('components.seo', [
+        'title' => 'Karya & Portofolio Siswa - PPLG SMKN 1 Cirebon',
+        'description' => 'Eksplorasi portofolio dan karya inovatif siswa PPLG SMKN 1 Cirebon, meliputi aplikasi web, mobile app, desain UI/UX, dan game.',
+        'keywords' => 'Karya Siswa PPLG, Portofolio Siswa, Game Siswa, Web Siswa, Proyek SMKN 1 Cirebon',
+        'type' => 'website',
+    ])
+
     <link
       rel="stylesheet"
       href="{{ asset('fontawesome/css/all.min.css') }}"
     />
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"-->
-    <!--    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="-->
-    <!--    crossorigin="anonymous" referrerpolicy="no-referrer" />-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -22,20 +26,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
-    <link rel="shortcut icon" href="{{ asset('logo.png') }}" type="image/x-icon">
-
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <meta name="description" content="Pengembangan Perangkat Lunak dan Gim - Temukan artikel, berita, dan informasi terkini tentang dunia perangkat lunak dan gim.">
-    <meta name="keywords" content="perangkat lunak, gim, artikel, berita, teknologi, pengembangan perangkat lunak">
-    <meta name="author" content="Dudung Zulkipli">
-    <meta property="og:title" content="PPLG - SMKN 1 Cirebon">
-    <meta property="og:description" content="Temukan artikel, berita, dan informasi terkini tentang dunia perangkat lunak dan gim.">
-    <meta property="og:image" content="{{ asset('logo.png') }}">
-    <meta property="og:url" content="{{ url()->current() }}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PPLG - SMKN 1 Cirebon">
-    <meta name="twitter:description" content="Temukan artikel, berita, dan informasi terkini tentang dunia perangkat lunak dan gim.">
-    <meta name="twitter:image" content="{{ asset('logo.png') }}">
     <style>
       * {
         font-family: "Poppins", sans-serif !important;

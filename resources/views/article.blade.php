@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('components.head')
+@include('components.head', [
+    'title' => 'Artikel & Berita - PPLG SMKN 1 Cirebon',
+    'description' => 'Kumpulan berita, artikel teknologi, informasi kegiatan, dan kabar seputar Pengembangan Perangkat Lunak dan Gim SMKN 1 Cirebon.',
+    'keywords' => 'Artikel PPLG, Berita PPLG SMKN 1 Cirebon, Berita Teknologi, Artikel Coding, PPLG Neper',
+    'type' => 'website',
+])
 
 <body>
     <main class="pt-24">

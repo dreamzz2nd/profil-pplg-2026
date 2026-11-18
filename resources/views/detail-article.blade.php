@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 
-@include('components.head')
+@php
+    $articleImage = !empty($article->images) ? asset('storage/images/' . $article->images) : url('logo.png');
+@endphp
+@include('components.head', [
+    'title' => ($article->title ?? 'Artikel') . ' - PPLG SMKN 1 Cirebon',
+    'description' => $article->description ?? '',
+    'keywords' => ($article->category_name ?? 'Artikel') . ', PPLG SMKN 1 Cirebon, Berita PPLG',
+    'image' => $articleImage,
+    'author' => $article->author ?? 'PPLG SMKN 1 Cirebon',
+    'publishedTime' => $article->date ?? null,
+    'type' => 'article',
+])
 
 <body>
     <main class="pt-24">
