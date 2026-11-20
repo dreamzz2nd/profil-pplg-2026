@@ -4,7 +4,10 @@
     <div class="card">
         <div class="d-flex justify-content-between align-items-center">
             <h5 class="card-header">Data Artikel</h5>
-            <div class="me-4">
+            <div class="me-4 d-flex gap-2">
+                <a href="/admin-pplg/dokumentasi-api" class="btn btn-info text-white">
+                    <i class="bx bx-book-bookmark me-1"></i> Dokumentasi API
+                </a>
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tambah">
                     Tambah Data Artikel
                 </button>

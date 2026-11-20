@@ -88,4 +88,7 @@ Route::prefix('/admin-pplg')->middleware('isLogin')->group(function () {
     Route::resource('software', SoftwareController::class)->except(['show']);
     Route::resource('karya-siswa', StudentPortfolioController::class)->except(['show']);
     Route::resource('banner', BannerController::class)->except(['show']);
+    Route::get('/dokumentasi-api', function () {
+        return view('admin.pages.dokumentasi.index');
+    })->name('admin.dokumentasi-api');
 });

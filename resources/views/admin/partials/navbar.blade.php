@@ -54,7 +54,7 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-semibold d-block">{{ auth()->user()->name }}</span>
+                            <span class="fw-semibold d-block">{{ auth()->user()->name ?? 'Admin' }}</span>
                             <!--<small class="text-muted">Admin</small>-->
                           </div>
                         </div>
