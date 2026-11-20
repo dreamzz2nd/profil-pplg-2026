@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\ArticleApiController;
 use App\Http\Controllers\Api\BannerApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -22,3 +23,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // Endpoint untuk Hotspot Landing Page mengambil banner iklan
 Route::get('/iklan', [BannerApiController::class, 'index']);
 Route::get('/banners', [BannerApiController::class, 'index']);
+
+// Endpoint API Artikel & Berita untuk Konsumsi Aplikasi Eksternal / Website Lain
+Route::get('/artikel', [ArticleApiController::class, 'index']);
+Route::get('/articles', [ArticleApiController::class, 'index']);
+
+Route::get('/artikel/kategori', [ArticleApiController::class, 'categories']);
+Route::get('/articles/categories', [ArticleApiController::class, 'categories']);
+
+Route::get('/artikel/{id}', [ArticleApiController::class, 'show']);
+Route::get('/articles/{id}', [ArticleApiController::class, 'show']);
